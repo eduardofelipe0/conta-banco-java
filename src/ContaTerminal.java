@@ -19,33 +19,29 @@ public class ContaTerminal {
         } else if (opcao == 2) {
             System.out.println("\nEncerrando o programa... Obrigado por usar nossos serviços!");
         } else {
-            System.out.println("Opção inválida. Por favor, tente novamente.");
+            System.out.println("\nOpção inválida. Por favor, tente novamente.");
         }
     }
 
     private static void criarConta(Scanner scanner) {
-        int numeroConta;
-        String agencia;
-        String nomeCliente;
-        double saldo;
 
         System.out.println("\nVamos criar sua conta! Por favor, forneça as seguintes informações:");
 
         System.out.print("\nNúmero da agência: ");
-        agencia = scanner.next();
+        String agencia = scanner.next();
 
         System.out.print("Número da conta: ");
-        numeroConta = scanner.nextInt();
+        int numeroConta = scanner.nextInt();
 
         scanner.nextLine();
 
         System.out.print("Nome do cliente: ");
-        nomeCliente = scanner.nextLine();
+        String nomeCliente = scanner.nextLine();
         
         System.out.print("Saldo inicial separado por vírgula: R$ ");
-        saldo = scanner.nextDouble();
+        double saldo = scanner.nextDouble();
 
-        System.out.printf("\nOlá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo é de R$ %.2f",
+        System.out.printf("\nOlá %s, obrigado por criar uma conta em nosso banco, sua agência é %s, conta %d e seu saldo é de R$ %.2f.",
                 nomeCliente, agencia, numeroConta, saldo);
     }
 }
